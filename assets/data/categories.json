@@ -1,0 +1,102 @@
+[
+  { "topic": "Business & Services", "group": "Doanh nghiệp", "name": "Tư vấn & huấn luyện" },
+  { "topic": "Business & Services", "group": "Doanh nghiệp", "name": "Tiếp thị & quảng cáo" },
+  { "topic": "Business & Services", "group": "Doanh nghiệp", "name": "Công nghệ & ứng dụng" },
+  { "topic": "Business & Services", "group": "Doanh nghiệp", "name": "Tài chính" },
+  { "topic": "Business & Services", "group": "Doanh nghiệp", "name": "Pháp lý" },
+  { "topic": "Business & Services", "group": "Doanh nghiệp", "name": "Bất động sản" },
+
+  { "topic": "Business & Services", "group": "Một trang", "name": "Sắp ra mắt" },
+  { "topic": "Business & Services", "group": "Một trang", "name": "Trang đích" },
+
+  { "topic": "Business & Services", "group": "Công nghiệp", "name": "Dịch vụ & bảo trì" },
+  { "topic": "Business & Services", "group": "Công nghiệp", "name": "Xây dựng" },
+  { "topic": "Business & Services", "group": "Công nghiệp", "name": "Ô tô & xe hơi" },
+  { "topic": "Business & Services", "group": "Công nghiệp", "name": "Nông nghiệp & canh tác" },
+  { "topic": "Business & Services", "group": "Công nghiệp", "name": "Thú cưng & động vật" },
+
+  { "topic": "Business & Services", "group": "Sức khỏe & thể chất", "name": "Sức khỏe" },
+  { "topic": "Business & Services", "group": "Sức khỏe & thể chất", "name": "Chăm sóc sức khỏe" },
+  { "topic": "Business & Services", "group": "Sức khỏe & thể chất", "name": "Thể thao & thể hình" },
+
+  { "topic": "Business & Services", "group": "Làm đẹp & tóc", "name": "Trang điểm & mỹ phẩm" },
+  { "topic": "Business & Services", "group": "Làm đẹp & tóc", "name": "Tóc" },
+
+  { "topic": "Business & Services", "group": "Thời trang & phong cách", "name": "Thời trang" },
+  { "topic": "Business & Services", "group": "Thời trang & phong cách", "name": "Phụ kiện" },
+
+  { "topic": "Business & Services", "group": "Du lịch & lữ hành", "name": "Khách sạn & nhà nghỉ B&B" },
+  { "topic": "Business & Services", "group": "Du lịch & lữ hành", "name": "Căn hộ & hostel" },
+  { "topic": "Business & Services", "group": "Du lịch & lữ hành", "name": "Dịch vụ du lịch" },
+
+  { "topic": "Business & Services", "group": "Nhà hàng & Ẩm thực", "name": "Dịch vụ tiệc & đầu bếp" },
+  { "topic": "Business & Services", "group": "Nhà hàng & Ẩm thực", "name": "Nhà hàng" },
+  { "topic": "Business & Services", "group": "Nhà hàng & Ẩm thực", "name": "Quán cà phê & tiệm bánh" },
+  { "topic": "Business & Services", "group": "Nhà hàng & Ẩm thực", "name": "Quán bar & câu lạc bộ" },
+  { "topic": "Business & Services", "group": "Nhà hàng & Ẩm thực", "name": "Đồ ăn & thức uống" },
+
+  { "topic": "Store", "group": "Thương mại điện tử", "name": "Thời trang & quần áo" },
+  { "topic": "Store", "group": "Thương mại điện tử", "name": "Trang sức & phụ kiện" },
+  { "topic": "Store", "group": "Thương mại điện tử", "name": "Nghệ thuật & thủ công" },
+  { "topic": "Store", "group": "Thương mại điện tử", "name": "Nhà cửa & trang trí" },
+  { "topic": "Store", "group": "Thương mại điện tử", "name": "Làm đẹp & chăm sóc sức khỏe" },
+  { "topic": "Store", "group": "Thương mại điện tử", "name": "Đồ ăn & thức uống" },
+  { "topic": "Store", "group": "Thương mại điện tử", "name": "Thể thao & dã ngoại" },
+  { "topic": "Store", "group": "Thương mại điện tử", "name": "Điện tử" },
+  { "topic": "Store", "group": "Thương mại điện tử", "name": "Trẻ em & em bé" },
+  { "topic": "Store", "group": "Thương mại điện tử", "name": "Sách & nhà xuất bản" },
+  { "topic": "Store", "group": "Thương mại điện tử", "name": "Thú cưng & động vật" },
+  { "topic": "Store", "group": "Thương mại điện tử", "name": "CBD" },
+
+  { "topic": "Creative", "group": "Nhiếp ảnh", "name": "Sự kiện & chân dung" },
+  { "topic": "Creative", "group": "Nhiếp ảnh", "name": "Thương mại & biên tập" },
+  { "topic": "Creative", "group": "Nhiếp ảnh", "name": "Du lịch & phóng sự" },
+
+  { "topic": "Creative", "group": "Thiết kế", "name": "Kiến trúc" },
+  { "topic": "Creative", "group": "Thiết kế", "name": "Thiết kế nội thất" },
+  { "topic": "Creative", "group": "Thiết kế", "name": "Nghệ thuật & minh họa" },
+  { "topic": "Creative", "group": "Thiết kế", "name": "Đồ họa & web" },
+  { "topic": "Creative", "group": "Thiết kế", "name": "Thương hiệu" },
+  { "topic": "Creative", "group": "Thiết kế", "name": "Thiết kế thời trang" },
+
+  { "topic": "Creative", "group": "Âm nhạc", "name": "Ca sĩ & nhạc sĩ" },
+  { "topic": "Creative", "group": "Âm nhạc", "name": "Ban nhạc" },
+  { "topic": "Creative", "group": "Âm nhạc", "name": "DJ & nhà sản xuất" },
+  { "topic": "Creative", "group": "Âm nhạc", "name": "Ngành công nghiệp âm nhạc" },
+  { "topic": "Creative", "group": "Âm nhạc", "name": "Quảng bá âm nhạc" },
+
+  { "topic": "Creative", "group": "Nghệ thuật sáng tạo", "name": "Nghệ thuật biểu diễn" },
+  { "topic": "Creative", "group": "Nghệ thuật sáng tạo", "name": "Nghệ thuật văn học" },
+  { "topic": "Creative", "group": "Nghệ thuật sáng tạo", "name": "Nghệ thuật thị giác" },
+
+  { "topic": "Creative", "group": "Hồ sơ & CV", "name": "Portfolio" },
+  { "topic": "Creative", "group": "Hồ sơ & CV", "name": "Sơ yếu lý lịch & CV" },
+  { "topic": "Creative", "group": "Hồ sơ & CV", "name": "Cá nhân" },
+
+  { "topic": "Creative", "group": "Video", "name": "Phim & truyền hình" },
+  { "topic": "Creative", "group": "Video", "name": "Giáo dục trực tuyến" },
+  { "topic": "Creative", "group": "Video", "name": "Vlog" },
+
+  { "topic": "Community", "group": "Giáo dục", "name": "Trường học & đại học" },
+  { "topic": "Community", "group": "Giáo dục", "name": "Giáo dục trực tuyến" },
+  { "topic": "Community", "group": "Giáo dục", "name": "Lớp học & khóa học" },
+
+  { "topic": "Community", "group": "Cộng đồng", "name": "Phi lợi nhuận" },
+  { "topic": "Community", "group": "Cộng đồng", "name": "Chính trị" },
+  { "topic": "Community", "group": "Cộng đồng", "name": "Tôn giáo" },
+  { "topic": "Community", "group": "Cộng đồng", "name": "Diễn đàn trực tuyến" },
+
+  { "topic": "Community", "group": "Sự kiện", "name": "Đám cưới" },
+  { "topic": "Community", "group": "Sự kiện", "name": "Ngày lễ & kỷ niệm" },
+  { "topic": "Community", "group": "Sự kiện", "name": "Hội nghị & meetup" },
+  { "topic": "Community", "group": "Sự kiện", "name": "Tổ chức sự kiện" },
+  { "topic": "Community", "group": "Sự kiện", "name": "Địa điểm" },
+
+  { "topic": "Blog", "group": "Blog", "name": "Blog cá nhân" },
+  { "topic": "Blog", "group": "Blog", "name": "Ẩm thực & du lịch" },
+  { "topic": "Blog", "group": "Blog", "name": "Tin tức & kinh doanh" },
+  { "topic": "Blog", "group": "Blog", "name": "Nghệ thuật" },
+  { "topic": "Blog", "group": "Blog", "name": "Thời trang & làm đẹp" },
+  { "topic": "Blog", "group": "Blog", "name": "Thể thao & sức khỏe" },
+  { "topic": "Blog", "group": "Blog", "name": "Podcast" }
+]

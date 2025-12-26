@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liên hệ • Templexa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./assets/css/styles.css?v=contact-fix-1" />
+<link rel="stylesheet" href="./assets/css/contact.css?v=contact-fix-1" />
+</head>
+
+<body>
+  <!-- HEADER (giữ thống nhất với index/about) -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="./index.html" aria-label="Templexa Home">
+        <img class="brand__logo" src="./assets/images/logo-templexa-2.png" alt="Templexa" />
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav__link" href="./index.html">Trang chủ</a>
+        <a class="nav__link" href="./about.html">Về chúng tôi</a>
+        <a class="nav__link nav__link--active" href="./contact.html">Liên hệ</a>
+      </nav>
+
+      <div class="actions">
+        <button class="iconbtn" aria-label="Language">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M2 12h20" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 2c3.2 3 3.2 17 0 20" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 2c-3.2 3-3.2 17 0 20" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+        </button>
+
+        <a class="link" href="#">Đăng nhập</a>
+        <a class="btn btn--primary" href="#">Bắt đầu</a>
+
+        <button class="hamburger" aria-label="Open menu" data-mobile-open>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile" data-mobile>
+      <div class="mobile__panel">
+        <div class="mobile__head">
+          <strong>Menu</strong>
+          <button class="iconbtn" aria-label="Close menu" data-mobile-close>✕</button>
+        </div>
+        <div class="mobile__body">
+          <a href="./index.html" class="mobile__link">Trang chủ</a>
+          <a href="./about.html" class="mobile__link">Về chúng tôi</a>
+          <a href="./contact.html" class="mobile__link">Liên hệ</a>
+
+          <hr class="mobile__hr" />
+          <a href="#" class="mobile__link">Đăng nhập</a>
+          <a href="#" class="btn btn--primary mobile__cta">Bắt đầu</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO (đồng bộ scale với index) -->
+  <section class="hero contact-hero">
+    <div class="container hero__inner">
+      <h1 class="hero__title">Liên hệ Templexa</h1>
+      <p class="contact-hero__sub">
+        Gửi yêu cầu hợp tác, tư vấn template hoặc hỗ trợ kỹ thuật. Chúng tôi sẽ phản hồi sớm nhất.
+      </p>
+
+      <div class="searchline" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <main class="contactmain">
+    <section class="section">
+      <div class="container contactgrid">
+        <!-- Form -->
+        <div class="cardform">
+          <div class="cardform__head">
+            <h2 class="cardform__title">Gửi tin nhắn</h2>
+            <p class="cardform__desc">Điền thông tin bên dưới, Templexa sẽ liên hệ lại.</p>
+          </div>
+
+          <form class="form" action="#" method="post" id="contactForm">
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="name">Họ và tên</label>
+                <input class="field__input" id="name" name="name" type="text" placeholder="Ví dụ: Nguyễn Văn A" required />
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="email">Email</label>
+                <input class="field__input" id="email" name="email" type="email" placeholder="you@company.com" required />
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="phone">Số điện thoại (tuỳ chọn)</label>
+                <input class="field__input" id="phone" name="phone" type="tel" placeholder="090..." />
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="topic">Chủ đề</label>
+                <select class="field__input" id="topic" name="topic" required>
+                  <option value="" selected disabled>Chọn chủ đề</option>
+                  <option value="consult">Tư vấn chọn template</option>
+                  <option value="custom">Thiết kế / tuỳ biến theo brand</option>
+                  <option value="support">Hỗ trợ kỹ thuật</option>
+                  <option value="partner">Hợp tác</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="message">Nội dung</label>
+              <textarea class="field__input field__textarea" id="message" name="message" rows="6" placeholder="Bạn cần Templexa hỗ trợ gì?" required></textarea>
+              <div class="field__hint">Mẹo: ghi rõ mục tiêu, deadline, link tham khảo (nếu có).</div>
+            </div>
+
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Gửi liên hệ</button>
+              <button class="btn btn--secondary" type="reset">Nhập lại</button>
+              <span class="form__note" id="formNote" aria-live="polite"></span>
+            </div>
+          </form>
+        </div>
+
+        <!-- Info side -->
+        <aside class="cardside">
+          <div class="infocard">
+            <h3 class="infocard__title">Thông tin liên hệ</h3>
+
+            <div class="infoitem">
+              <div class="infoitem__icon">✉️</div>
+              <div>
+                <div class="infoitem__label">Email</div>
+                <div class="infoitem__value"><a href="mailto:hello@templexa.com">hello@templexa.com</a></div>
+              </div>
+            </div>
+
+            <div class="infoitem">
+              <div class="infoitem__icon">☎️</div>
+              <div>
+                <div class="infoitem__label">Hotline</div>
+                <div class="infoitem__value"><a href="tel:+84900000000">+84 900 000 000</a></div>
+              </div>
+            </div>
+
+            <div class="infoitem">
+              <div class="infoitem__icon">📍</div>
+              <div>
+                <div class="infoitem__label">Địa chỉ</div>
+                <div class="infoitem__value">TP. Hồ Chí Minh, Việt Nam</div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="chips">
+              <span class="chip">Tư vấn template</span>
+              <span class="chip">Tuỳ biến brand</span>
+              <span class="chip">Hỗ trợ kỹ thuật</span>
+            </div>
+          </div>
+
+          <div class="mapcard" aria-label="Map placeholder">
+            <div class="mapcard__top">
+              <div class="mapcard__dot"></div><div class="mapcard__dot"></div><div class="mapcard__dot"></div>
+            </div>
+            <div class="mapcard__body">
+              <div class="mapcard__pin">📍</div>
+              <div class="mapcard__title">Văn phòng Templexa</div>
+              <div class="mapcard__sub">Bạn có thể thay bằng Google Maps embed.</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CTA strip -->
+    <section class="ctastrip">
+      <div class="container ctastrip__inner">
+        <div>
+          <h2 class="ctastrip__title">Muốn xem ngay template?</h2>
+          <p class="ctastrip__text">Quay lại thư viện templates và chọn phong cách bạn thích.</p>
+        </div>
+        <div class="ctastrip__actions">
+          <a class="btn btn--primary" href="./index.html">Xem Templates</a>
+          <a class="btn btn--secondary" href="./about.html">Tìm hiểu Templexa</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (tái sử dụng style chung) -->
+  <footer class="footer">
+    <div class="container footer__top">
+      <div class="footer__cols">
+        <div class="col">
+          <h3 class="col__title">Product</h3>
+          <a class="col__link" href="./index.html">Website Templates</a>
+          <a class="col__link" href="#">Website Builder</a>
+          <a class="col__link" href="#">AI Website Builder</a>
+          <a class="col__link" href="#">App Market</a>
+        </div>
+
+        <div class="col">
+          <h3 class="col__title">Solutions</h3>
+          <a class="col__link" href="#">Online Store</a>
+          <a class="col__link" href="#">Booking</a>
+          <a class="col__link" href="#">Portfolio</a>
+          <a class="col__link" href="#">Blog</a>
+        </div>
+
+        <div class="col">
+          <h3 class="col__title">Learn</h3>
+          <a class="col__link" href="#">Templexa Blog</a>
+          <a class="col__link" href="#">SEO Learning Hub</a>
+          <a class="col__link" href="#">Privacy & Security</a>
+        </div>
+
+        <div class="col">
+          <h3 class="col__title">Support</h3>
+          <a class="col__link" href="#">Help Center</a>
+          <a class="col__link" href="#">System Status</a>
+          <a class="col__link" href="#">Report Abuse</a>
+        </div>
+
+        <div class="col">
+          <h3 class="col__title">Company</h3>
+          <a class="col__link" href="./about.html">About</a>
+          <a class="col__link" href="./contact.html">Contact</a>
+          <a class="col__link" href="#">Careers</a>
+        </div>
+      </div>
+
+      <div class="footer__about">
+        <div class="footer__logo">
+          <span class="brand__mark brand__mark--big">T</span>
+          <span class="brand__name brand__name--big">TEMPLEXA</span>
+        </div>
+        <p class="footer__text">
+          Templexa giúp cá nhân & doanh nghiệp tạo website chuyên nghiệp nhanh chóng bằng template system hiện đại.
+        </p>
+
+        <div class="footer__mini">
+          <a class="footer__miniLink" href="./about.html">About</a>
+          <a class="footer__miniLink" href="./contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <div class="social" aria-label="Social links">
+        <a class="social__btn" href="#" aria-label="Facebook">f</a>
+        <a class="social__btn" href="#" aria-label="YouTube">▶</a>
+        <a class="social__btn" href="#" aria-label="Instagram">⌁</a>
+        <a class="social__btn" href="#" aria-label="TikTok">♪</a>
+      </div>
+
+      <div class="legal">
+        <a href="#" class="legal__link">Terms</a>
+        <a href="#" class="legal__link">Privacy</a>
+        <span class="legal__copy">© 2006–2025 Templexa.com, Inc</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS chung (mobile menu + các behavior có check element) -->
+  <script src="./assets/js/app.js"></script>
+
+  <!-- JS riêng Contact: submit demo -->
+  <script src="./assets/js/contact.js"></script>
+</body>
+</html>

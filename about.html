@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Về chúng tôi • Templexa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS chung -->
+    <link rel="stylesheet" href="./assets/css/styles.css?v=3" />
+  <!-- CSS riêng trang About -->
+    <link rel="stylesheet" href="./assets/css/about.css?v=3" />
+</head>
+
+<body>
+  <!-- Top header -->
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="./index.html" aria-label="Templexa Home">
+      <img class="brand__logo" src="./assets/images/logo-templexa-2.png" alt="Templexa" />
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav__link" href="./index.html">Trang chủ</a>
+      <a class="nav__link nav__link--active" href="./about.html">Về chúng tôi</a>
+      <a class="nav__link" href="./contact.html">Liên hệ</a>
+    </nav>
+
+    <div class="actions">
+      <button class="iconbtn" aria-label="Language">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M2 12h20" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M12 2c3.2 3 3.2 17 0 20" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M12 2c-3.2 3-3.2 17 0 20" stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+      </button>
+
+      <a class="link" href="#">Đăng nhập</a>
+      <a class="btn btn--primary" href="#">Bắt đầu</a>
+
+      <button class="hamburger" aria-label="Open menu" data-mobile-open>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile" data-mobile>
+    <div class="mobile__panel">
+      <div class="mobile__head">
+        <strong>Menu</strong>
+        <button class="iconbtn" aria-label="Close menu" data-mobile-close>✕</button>
+      </div>
+      <div class="mobile__body">
+        <a href="./index.html" class="mobile__link">Trang chủ</a>
+        <a href="./about.html" class="mobile__link">Về chúng tôi</a>
+        <a href="./contact.html" class="mobile__link">Liên hệ</a>
+
+        <hr class="mobile__hr" />
+        <a href="#" class="mobile__link">Đăng nhập</a>
+        <a href="#" class="btn btn--primary mobile__cta">Bắt đầu</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Page Hero -->
+    <section class="hero about-hero">
+    <div class="container hero__inner">
+        <h1 class="hero__title">Về Templexa</h1>
+        <p class="about-hero__sub">
+        Templexa giúp bạn tạo website chuyên nghiệp nhanh chóng bằng hệ thống template tối ưu trải nghiệm,
+        UI sáng sủa và chuẩn thương hiệu.
+        </p>
+
+        <div class="searchline" aria-hidden="true"></div>
+    </div>
+    </section>
+
+  <main class="aboutmain">
+    <!-- Intro -->
+    <section class="section">
+      <div class="container section__grid">
+        <div>
+          <h2 class="section__title">Chúng tôi xây dựng để bạn tăng trưởng</h2>
+          <p class="section__text">
+            Từ landing page đến website doanh nghiệp, Templexa tập trung vào tốc độ triển khai,
+            khả năng tuỳ biến và tính nhất quán UI để bạn có thể ra mắt nhanh, chỉnh sửa dễ,
+            và mở rộng về sau.
+          </p>
+
+          <ul class="list">
+            <li>Hệ template “clean” tối ưu đọc – tối ưu chuyển đổi</li>
+            <li>Màu thương hiệu xanh – sạch – sáng, dễ phối nội dung</li>
+            <li>Layout chuẩn responsive, sẵn CTA & section phổ biến</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <div class="panel__kpi">
+            <div class="kpi">
+              <div class="kpi__num">200+</div>
+              <div class="kpi__label">Mẫu giao diện</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi__num">30+</div>
+              <div class="kpi__label">Ngành hàng</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi__num">1–3</div>
+              <div class="kpi__label">Ngày triển khai</div>
+            </div>
+          </div>
+
+          <div class="panel__note">
+            <strong>Tip:</strong> Bạn có thể tùy biến tone màu theo brand nhưng vẫn giữ “Templexa clean system”
+            để đảm bảo nhất quán.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title section__title--center">Giá trị cốt lõi</h2>
+        <p class="section__text section__text--center">
+          Tối giản nhưng không đơn điệu — ưu tiên sự rõ ràng, tốc độ và trải nghiệm.
+        </p>
+
+        <div class="cards">
+          <article class="cardx">
+            <div class="cardx__icon">✨</div>
+            <h3 class="cardx__title">Clean UI</h3>
+            <p class="cardx__text">Tổ chức khoảng trắng tốt, typography rõ ràng, dễ đọc trên nền sáng.</p>
+          </article>
+
+          <article class="cardx">
+            <div class="cardx__icon">⚡</div>
+            <h3 class="cardx__title">Nhanh & nhẹ</h3>
+            <p class="cardx__text">Tối ưu cấu trúc để tải nhanh, ít phụ thuộc, dễ triển khai.</p>
+          </article>
+
+          <article class="cardx">
+            <div class="cardx__icon">🧩</div>
+            <h3 class="cardx__title">Modular</h3>
+            <p class="cardx__text">Section theo module: dễ thay đổi, thay text/ảnh là dùng được ngay.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Đội ngũ</h2>
+          <p class="section__text">
+            Nhóm thiết kế & phát triển tập trung vào trải nghiệm tạo website, template system và UI kit.
+          </p>
+        </div>
+
+        <div class="team">
+          <article class="member">
+            <div class="member__avatar" aria-hidden="true">A</div>
+            <div class="member__name">An</div>
+            <div class="member__role">Product Design</div>
+          </article>
+
+          <article class="member">
+            <div class="member__avatar" aria-hidden="true">B</div>
+            <div class="member__name">Bình</div>
+            <div class="member__role">Frontend Engineer</div>
+          </article>
+
+          <article class="member">
+            <div class="member__avatar" aria-hidden="true">C</div>
+            <div class="member__name">Chi</div>
+            <div class="member__role">Template System</div>
+          </article>
+
+          <article class="member">
+            <div class="member__avatar" aria-hidden="true">D</div>
+            <div class="member__name">Dũng</div>
+            <div class="member__role">Growth & Content</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA strip -->
+    <section class="ctastrip">
+      <div class="container ctastrip__inner">
+        <div>
+          <h2 class="ctastrip__title">Sẵn sàng ra mắt website mới?</h2>
+          <p class="ctastrip__text">Chọn template, tuỳ biến nội dung và publish nhanh với Templexa.</p>
+        </div>
+        <div class="ctastrip__actions">
+          <a class="btn btn--primary" href="./index.html">Bắt đầu ngay</a>
+          <a class="btn btn--secondary" href="./contact.html">Nhận tư vấn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (giữ cùng phong cách) -->
+  <footer class="footer">
+    <div class="container footer__top">
+      <div class="footer__cols">
+        <div class="col">
+          <h3 class="col__title">Product</h3>
+          <a class="col__link" href="./index.html">Website Templates</a>
+          <a class="col__link" href="#">Website Builder</a>
+          <a class="col__link" href="#">AI Website Builder</a>
+          <a class="col__link" href="#">App Market</a>
+        </div>
+
+        <div class="col">
+          <h3 class="col__title">Solutions</h3>
+          <a class="col__link" href="#">Online Store</a>
+          <a class="col__link" href="#">Booking</a>
+          <a class="col__link" href="#">Portfolio</a>
+          <a class="col__link" href="#">Blog</a>
+        </div>
+
+        <div class="col">
+          <h3 class="col__title">Learn</h3>
+          <a class="col__link" href="#">Templexa Blog</a>
+          <a class="col__link" href="#">SEO Learning Hub</a>
+          <a class="col__link" href="#">Privacy & Security</a>
+        </div>
+
+        <div class="col">
+          <h3 class="col__title">Support</h3>
+          <a class="col__link" href="#">Help Center</a>
+          <a class="col__link" href="#">System Status</a>
+          <a class="col__link" href="#">Report Abuse</a>
+        </div>
+
+        <div class="col">
+          <h3 class="col__title">Company</h3>
+          <a class="col__link" href="./about.html">About</a>
+          <a class="col__link" href="./contact.html">Contact</a>
+          <a class="col__link" href="#">Careers</a>
+        </div>
+      </div>
+
+      <div class="footer__about">
+        <div class="footer__logo">
+          <span class="brand__mark brand__mark--big">T</span>
+          <span class="brand__name brand__name--big">TEMPLEXA</span>
+        </div>
+        <p class="footer__text">
+          Templexa giúp cá nhân & doanh nghiệp tạo website chuyên nghiệp nhanh chóng bằng template system hiện đại.
+        </p>
+
+        <div class="footer__mini">
+          <a class="footer__miniLink" href="./about.html">About</a>
+          <a class="footer__miniLink" href="./contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <div class="social" aria-label="Social links">
+        <a class="social__btn" href="#" aria-label="Facebook">f</a>
+        <a class="social__btn" href="#" aria-label="YouTube">▶</a>
+        <a class="social__btn" href="#" aria-label="Instagram">⌁</a>
+        <a class="social__btn" href="#" aria-label="TikTok">♪</a>
+      </div>
+
+      <div class="legal">
+        <a href="#" class="legal__link">Terms</a>
+        <a href="#" class="legal__link">Privacy</a>
+        <span class="legal__copy">© 2006–2025 Templexa.com, Inc</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- dùng chung app.js (an toàn vì code đã check element tồn tại) -->
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

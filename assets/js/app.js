@@ -131,8 +131,8 @@ function renderGrid() {
 
         <div class="overlay">
           <div class="overlay__stack">
-            <button class="pill pill--dark" type="button" data-action="edit" data-id="${t.id}">Edit</button>
-            <button class="pill" type="button" data-action="view" data-id="${t.id}">View</button>
+            <button class="pill pill--dark" type="button" data-action="edit" data-id="${t.id}">Liên hệ</button>
+            <button class="pill" type="button" data-action="view" data-id="${t.id}">Xem</button>
           </div>
         </div>
       </div>
@@ -346,33 +346,32 @@ async function loadCategories() {
   return await res.json();
 }
 
-function uniq(arr) {
-  return Array.from(new Set(arr));
+function groupBy(arr, keyFn) {
+  const map = new Map();
+  arr.forEach(item => {
+    const k = keyFn(item);
+    if (!map.has(k)) map.set(k, []);
+    map.get(k).push(item);
+  });
+  return map;
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
   const topicBtns = Array.from(document.querySelectorAll(".cats__item[data-cat]"));
   const drop = document.getElementById("catsDrop");
-  const groupsEl = document.getElementById("catsGroups");
-  const namesEl = document.getElementById("catsNames");
+  const mega = document.getElementById("catsMega");
   const titleEl = document.getElementById("catsDropTitle");
   const closeBtn = document.querySelector("[data-cats-close]");
 
-  // Không có cats section thì thôi
-  if (!topicBtns.length || !drop || !groupsEl || !namesEl || !titleEl) return;
+  if (!topicBtns.length || !drop || !mega || !titleEl) return;
 
   let rows = [];
   try {
     rows = await loadCategories();
   } catch (err) {
     console.error(err);
-    titleEl.textContent = "Không tải được danh mục";
-    groupsEl.innerHTML = `<div style="padding:12px; color:#5E7A90;">Kiểm tra đường dẫn: <b>assets/data/categories.json</b></div>`;
     return;
   }
-
-  let activeTopic = null;
-  let activeGroup = null;
 
   const TOPIC_LABEL = {
     "Business & Services": "Dịch vụ",
@@ -381,6 +380,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     "Community": "Sự kiện",
     "Blog": "Blog"
   };
+
+  let activeTopic = null;
 
   function openDrop(btn) {
     drop.classList.add("catsdrop--open");
@@ -394,57 +395,55 @@ document.addEventListener("DOMContentLoaded", async () => {
     topicBtns.forEach(b => b.setAttribute("aria-expanded", "false"));
   }
 
-  function render(topic) {
+  function renderMega(topic) {
     const topicRows = rows.filter(r => r.topic === topic);
 
-    // Nếu topic chưa có data
-    if (!topicRows.length) {
-      titleEl.textContent = TOPIC_LABEL[topic] || topic;
-      groupsEl.innerHTML = `<div style="padding:12px; color:#5E7A90;">Chưa có dữ liệu cho topic này.</div>`;
-      namesEl.innerHTML = "";
-      return;
-    }
-
-    const groups = uniq(topicRows.map(r => r.group));
-
-    // group mặc định
-    if (!activeGroup || !groups.includes(activeGroup)) activeGroup = groups[0];
-
     titleEl.textContent = TOPIC_LABEL[topic] || topic;
+    mega.innerHTML = "";
 
-    // render groups
-    groupsEl.innerHTML = "";
-    groups.forEach(g => {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.className = "catsdrop__group" + (g === activeGroup ? " catsdrop__group--active" : "");
-      b.textContent = g;
-      b.addEventListener("click", () => {
-        activeGroup = g;
-        render(topic);
-      });
-      groupsEl.appendChild(b);
+    if (!topicRows.length) return;
+
+    // Giữ thứ tự group theo đúng JSON (không sort) để bạn dễ kiểm soát
+    const groupsInOrder = [];
+    const seen = new Set();
+    topicRows.forEach(r => {
+      if (!seen.has(r.group)) {
+        seen.add(r.group);
+        groupsInOrder.push(r.group);
+      }
     });
 
-    // render names
-    const names = topicRows.filter(r => r.group === activeGroup).map(r => r.name);
-    namesEl.innerHTML = "";
+    const byGroup = groupBy(topicRows, r => r.group);
 
-    names.forEach(name => {
-      const a = document.createElement("a");
-      a.className = "catsdrop__name";
-      a.textContent = name;
+    groupsInOrder.forEach(groupName => {
+      const block = document.createElement("div");
+      block.className = "catsdrop__groupBlock";
 
-      // Nếu bạn CHƯA có templates.html thì tạm để "#"
-      // a.href = "#";
+      const h = document.createElement("div");
+      h.className = "catsdrop__groupTitle";
+      h.textContent = groupName;
 
-      // Nếu bạn có templates.html thì giữ link này
-      const t = encodeURIComponent(topic);
-      const g = encodeURIComponent(activeGroup);
-      const n = encodeURIComponent(name);
-      a.href = `./templates.html?topic=${t}&group=${g}&name=${n}`;
+      block.appendChild(h);
 
-      namesEl.appendChild(a);
+      const items = byGroup.get(groupName) || [];
+      items.forEach(it => {
+        const a = document.createElement("a");
+        a.className = "catsdrop__link";
+        a.textContent = it.name;
+
+        // Nếu bạn CHƯA có templates.html, tạm để "#"
+        // a.href = "#";
+
+        // Nếu CÓ templates.html:
+        const t = encodeURIComponent(it.topic);
+        const g = encodeURIComponent(it.group);
+        const n = encodeURIComponent(it.name);
+        a.href = `./templates.html?topic=${t}&group=${g}&name=${n}`;
+
+        block.appendChild(a);
+      });
+
+      mega.appendChild(block);
     });
   }
 
@@ -453,28 +452,24 @@ document.addEventListener("DOMContentLoaded", async () => {
       e.preventDefault();
       const topic = btn.dataset.cat;
 
-      // bấm lại cùng topic thì toggle đóng
       if (drop.classList.contains("catsdrop--open") && activeTopic === topic) {
         closeDrop();
         return;
       }
 
       activeTopic = topic;
-      activeGroup = null; // reset để auto chọn group đầu
-      render(activeTopic);
+      renderMega(activeTopic);
       openDrop(btn);
     });
   });
 
   closeBtn?.addEventListener("click", closeDrop);
 
-  // Click ra ngoài cats -> đóng
   document.addEventListener("click", (e) => {
     const insideCats = e.target.closest(".cats");
     if (!insideCats) closeDrop();
   });
 
-  // ESC -> đóng
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeDrop();
   });

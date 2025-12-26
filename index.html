@@ -108,29 +108,22 @@
         </button>
       </div>
 
-            <!-- Categories dropdown -->
+
+      <!-- Categories dropdown -->
       <div class="catsdrop" id="catsDrop" aria-hidden="true">
         <div class="container">
-          <div class="catsdrop__panel" role="dialog" aria-label="Danh mục">
+          <div class="catsdrop__panel catsdrop__panel--mega" role="dialog" aria-label="Danh mục">
             <div class="catsdrop__head">
               <div class="catsdrop__title" id="catsDropTitle">Danh mục</div>
               <button class="iconbtn" type="button" data-cats-close aria-label="Đóng">✕</button>
             </div>
 
-            <div class="catsdrop__cols">
-              <div class="catsdrop__col">
-                <div class="catsdrop__label">Nhóm</div>
-                <div class="catsdrop__list" id="catsGroups"></div>
-              </div>
-
-              <div class="catsdrop__col">
-                <div class="catsdrop__label">Loại</div>
-                <div class="catsdrop__grid" id="catsNames"></div>
-              </div>
-            </div>
+            <!-- MEGA content -->
+            <div class="catsdrop__mega" id="catsMega"></div>
           </div>
         </div>
       </div>
+
 
       <div class="cats__right">
         <button class="tab tab--active" data-filter="Website Templates">Website Templates</button>
